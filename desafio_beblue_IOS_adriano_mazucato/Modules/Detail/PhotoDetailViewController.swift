@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol PhotoDetailViewControllerDelegate: class {
+    func photoDetailViewController(didEnd viewController: PhotoDetailViewController)
+}
+
 class PhotoDetailViewController: UIViewController {
 
     var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .center
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -24,6 +28,7 @@ class PhotoDetailViewController: UIViewController {
         return label
     }()
     
+    weak var delegate: PhotoDetailViewControllerDelegate?
     let photo: Photo
     
     public init(photo: Photo) {
@@ -43,6 +48,14 @@ class PhotoDetailViewController: UIViewController {
         configureTouchName()
         setupUI()
         start()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if isMovingFromParent {
+            self.delegate?.photoDetailViewController(didEnd: self)
+        }
     }
 }
 

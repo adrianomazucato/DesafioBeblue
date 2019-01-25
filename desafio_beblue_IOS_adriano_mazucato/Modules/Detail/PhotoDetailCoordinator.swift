@@ -10,17 +10,25 @@ import UIKit
 
 class PhotoDetailCoordinator: Coordinator {
     
-    let photo: Photo
+    let controller: PhotoDetailViewController
+    var didEnd:(() -> Void)?
     
     init(photo: Photo, rootViewController: UIViewController?) {
-        self.photo = photo
+        controller = PhotoDetailViewController(photo: photo)
         super.init(rootViewController: rootViewController)
+        
+        controller.delegate = self
     }
 
     override func start(completion: (() -> Void)?) {
-        let controller = PhotoDetailViewController(photo: photo)
         if let navigationController = self.rootViewController as? UINavigationController {
             navigationController.pushViewController(controller, animated: true)
         }
+    }
+}
+
+extension PhotoDetailCoordinator: PhotoDetailViewControllerDelegate {
+    func photoDetailViewController(didEnd viewController: PhotoDetailViewController) {
+        didEnd?()
     }
 }

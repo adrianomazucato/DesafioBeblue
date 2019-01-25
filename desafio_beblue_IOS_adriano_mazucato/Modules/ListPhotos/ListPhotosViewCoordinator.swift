@@ -23,6 +23,9 @@ class ListPhotosViewCoordinator: Coordinator {
 extension ListPhotosViewCoordinator: ListPhotosViewControllerDelegate {
     func listPhotosViewController(viewController: ListPhotosViewController, showPhotoDetail photo: Photo) {
         let detailCoordinator = PhotoDetailCoordinator(photo: photo, rootViewController: self.rootViewController)
-        detailCoordinator.start(completion: nil)
+        detailCoordinator.didEnd = {
+            self.stopChild(coordinator: detailCoordinator)
+        }
+        detailCoordinator.startChild(coordinator: detailCoordinator)
     }
 }
