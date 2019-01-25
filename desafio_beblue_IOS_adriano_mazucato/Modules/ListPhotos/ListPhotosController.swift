@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListPhotosController {
+class ListPhotosController: NSObject {
     
     enum Camera: String {
         case curiosity = "curiosity"
@@ -29,6 +29,12 @@ class ListPhotosController {
         }
     }
     
+    @objc dynamic var indexCamera: Int = 0 {
+        didSet {
+            selectCamera(at: indexCamera)
+        }
+    }
+    
     let viewModel: ListPhotosViewModel
     var photosData: [Photo] = [Photo]()
     
@@ -38,9 +44,7 @@ class ListPhotosController {
     
     private func fetchPhotos() {
         photosData.removeAll()
-        
-        print("camera \(camera)")
-        
+                
         ApiNasaService.fetchPhotos(camera.rawValue, date: currentDate.apiFormatterDate) { ( response ) in
             switch(response) {
             case .success(let value):

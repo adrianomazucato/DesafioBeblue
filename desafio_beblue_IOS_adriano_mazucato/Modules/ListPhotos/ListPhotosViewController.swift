@@ -19,7 +19,7 @@ class ListPhotosViewController: UIViewController {
         let segmentedControl = UISegmentedControl(items: ListPhotosController.Camera.allCases)
         segmentedControl.backgroundColor = .white
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(ListPhotosViewController.valueChanged), for: .valueChanged)
+        //segmentedControl.addTarget(self, action: #selector(ListPhotosViewController.valueChanged), for: .valueChanged)
         return segmentedControl
     }()
     
@@ -89,11 +89,13 @@ extension ListPhotosViewController {
         self.navigationItem.title = "Mars Rovers Photos"
     }
     
-    @objc func valueChanged(segmentedControl: UISegmentedControl) {
-        controller.selectCamera(at: segmentedControl.selectedSegmentIndex)        
-    }
+//    @objc func valueChanged(segmentedControl: UISegmentedControl) {
+//        controller.selectCamera(at: segmentedControl.selectedSegmentIndex)        
+//    }
     
     func bindViewModel() {
+        
+        segmentedControl.bind(to: controller, property: "indexCamera", controllEvent: .valueChanged)
         
         controller.viewModel.observable.bind { state in
             switch state {

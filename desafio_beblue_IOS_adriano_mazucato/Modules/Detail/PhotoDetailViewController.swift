@@ -59,7 +59,6 @@ class PhotoDetailViewController: UIViewController {
     }
 }
 
-
 extension PhotoDetailViewController {
     func addViews() {
         self.view.addSubview(namePhoto)

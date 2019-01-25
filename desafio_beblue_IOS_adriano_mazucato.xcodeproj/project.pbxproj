@@ -65,6 +65,13 @@
 		0EC8B6AB21FB9C7D007F33A3 /* EnumCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B6AA21FB9C7D007F33A3 /* EnumCollection+Extension.swift */; };
 		0EC8B6AC21FB9C7D007F33A3 /* EnumCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B6AA21FB9C7D007F33A3 /* EnumCollection+Extension.swift */; };
 		0EC8B6AD21FB9C7D007F33A3 /* EnumCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B6AA21FB9C7D007F33A3 /* EnumCollection+Extension.swift */; };
+		0EC8B6AF21FBCB81007F33A3 /* ControlObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B6AE21FBCB81007F33A3 /* ControlObservable.swift */; };
+		0EC8B6B021FBCB81007F33A3 /* ControlObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B6AE21FBCB81007F33A3 /* ControlObservable.swift */; };
+		0EC8B6B121FBCB81007F33A3 /* ControlObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B6AE21FBCB81007F33A3 /* ControlObservable.swift */; };
+		0EC8B6B221FBCC2B007F33A3 /* ApiNasaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B67E21FB7671007F33A3 /* ApiNasaService.swift */; };
+		0EC8B6B321FBCC2C007F33A3 /* ApiNasaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B67E21FB7671007F33A3 /* ApiNasaService.swift */; };
+		0EC8B6B421FBCC32007F33A3 /* APIConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B65221FB3E0E007F33A3 /* APIConsumer.swift */; };
+		0EC8B6B521FBCC33007F33A3 /* APIConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B65221FB3E0E007F33A3 /* APIConsumer.swift */; };
 		0EDBA49821F9C2EC0095A811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBA49721F9C2EC0095A811 /* AppDelegate.swift */; };
 		0EDBA49A21F9C2EC0095A811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBA49921F9C2EC0095A811 /* ViewController.swift */; };
 		0EDBA49D21F9C2EC0095A811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBA49B21F9C2EC0095A811 /* Main.storyboard */; };
@@ -119,6 +126,7 @@
 		0EC8B69F21FB92E4007F33A3 /* PhotosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
 		0EC8B6A621FB9570007F33A3 /* ImageViewZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewZoom.swift; sourceTree = "<group>"; };
 		0EC8B6AA21FB9C7D007F33A3 /* EnumCollection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnumCollection+Extension.swift"; sourceTree = "<group>"; };
+		0EC8B6AE21FBCB81007F33A3 /* ControlObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlObservable.swift; sourceTree = "<group>"; };
 		0EDBA49421F9C2EC0095A811 /* desafio_beblue_IOS_adriano_mazucato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafio_beblue_IOS_adriano_mazucato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDBA49721F9C2EC0095A811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EDBA49921F9C2EC0095A811 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +243,7 @@
 		0EC8B66821FB6793007F33A3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0EC8B6AE21FBCB81007F33A3 /* ControlObservable.swift */,
 				0EC8B68821FB8534007F33A3 /* Observable.swift */,
 				0EC8B66A21FB67A0007F33A3 /* CoordinatorProtocol.swift */,
 				0EC8B67121FB6E1F007F33A3 /* CollectionViewLayout.swift */,
@@ -582,6 +591,7 @@
 				0EC8B68921FB8534007F33A3 /* Observable.swift in Sources */,
 				0EC8B6A021FB92E4007F33A3 /* PhotosListViewController.swift in Sources */,
 				0EC8B66521FB676B007F33A3 /* ListPhotosViewCoordinator.swift in Sources */,
+				0EC8B6AF21FBCB81007F33A3 /* ControlObservable.swift in Sources */,
 				0EC8B66E21FB67A0007F33A3 /* CoordinatorProtocol.swift in Sources */,
 				0EC8B68121FB792F007F33A3 /* ListPhotosController.swift in Sources */,
 				0EC8B65D21FB6392007F33A3 /* ListPhotosViewController.swift in Sources */,
@@ -612,14 +622,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC8B6B421FBCC32007F33A3 /* APIConsumer.swift in Sources */,
 				0EC8B6A321FB9394007F33A3 /* Photo.swift in Sources */,
 				0EDBA4AD21F9C2EE0095A811 /* desafio_beblue_IOS_adriano_mazucatoTests.swift in Sources */,
 				0EC8B67C21FB7057007F33A3 /* UICollectionView+Extension.swift in Sources */,
 				0EC8B68221FB79BB007F33A3 /* ListPhotosController.swift in Sources */,
+				0EC8B6B021FBCB81007F33A3 /* ControlObservable.swift in Sources */,
 				0EC8B69B21FB90C9007F33A3 /* PhotoDetailCoordinator.swift in Sources */,
 				0EC8B6A121FB92E4007F33A3 /* PhotosListViewController.swift in Sources */,
 				0EC8B69321FB894F007F33A3 /* PhotoItemViewModel.swift in Sources */,
 				0EC8B67821FB6F19007F33A3 /* ItemPhotoCell.swift in Sources */,
+				0EC8B6B221FBCC2B007F33A3 /* ApiNasaService.swift in Sources */,
 				0EC8B68A21FB8534007F33A3 /* Observable.swift in Sources */,
 				0EC8B69D21FB915D007F33A3 /* ListPhotosViewController.swift in Sources */,
 				0EC8B69721FB9088007F33A3 /* PhotoDetailViewController.swift in Sources */,
@@ -637,14 +650,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC8B6B521FBCC33007F33A3 /* APIConsumer.swift in Sources */,
 				0EC8B6A421FB9395007F33A3 /* Photo.swift in Sources */,
 				0EDBA4B821F9C2EE0095A811 /* desafio_beblue_IOS_adriano_mazucatoUITests.swift in Sources */,
 				0EC8B67D21FB7057007F33A3 /* UICollectionView+Extension.swift in Sources */,
 				0EC8B68321FB79BD007F33A3 /* ListPhotosController.swift in Sources */,
+				0EC8B6B121FBCB81007F33A3 /* ControlObservable.swift in Sources */,
 				0EC8B69C21FB90C9007F33A3 /* PhotoDetailCoordinator.swift in Sources */,
 				0EC8B6A221FB92E4007F33A3 /* PhotosListViewController.swift in Sources */,
 				0EC8B69421FB894F007F33A3 /* PhotoItemViewModel.swift in Sources */,
 				0EC8B67921FB6F19007F33A3 /* ItemPhotoCell.swift in Sources */,
+				0EC8B6B321FBCC2C007F33A3 /* ApiNasaService.swift in Sources */,
 				0EC8B68B21FB8534007F33A3 /* Observable.swift in Sources */,
 				0EC8B69E21FB915D007F33A3 /* ListPhotosViewController.swift in Sources */,
 				0EC8B69821FB9088007F33A3 /* PhotoDetailViewController.swift in Sources */,
