@@ -90,14 +90,14 @@ extension ListPhotosViewController {
     }
     
 //    @objc func valueChanged(segmentedControl: UISegmentedControl) {
-//        controller.selectCamera(at: segmentedControl.selectedSegmentIndex)        
+//        controller.selectCamera(at: segmentedControl.selectedSegmentIndex)
 //    }
     
     func bindViewModel() {
         
         segmentedControl.bind(to: controller, property: "indexCamera", controllEvent: .valueChanged)
         
-        controller.viewModel.observable.bind { state in
+        controller.viewModel.viewStateObservable.bind { state in
             switch state {
             case .loading:
                 self.collectionView.reloadData()

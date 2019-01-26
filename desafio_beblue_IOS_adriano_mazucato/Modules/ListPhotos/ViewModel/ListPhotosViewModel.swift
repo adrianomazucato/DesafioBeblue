@@ -16,5 +16,5 @@ class ListPhotosViewModel {
         case error(error: String)
     }
     
-    let observable: Observable = Observable<ViewState>(.none)
+    let viewStateObservable: Observable = Observable<ViewState>(.none)
 }

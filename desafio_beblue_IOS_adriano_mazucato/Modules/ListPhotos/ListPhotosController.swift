@@ -54,7 +54,7 @@ class ListPhotosController: NSObject {
                     }
                 break
             case .error(let error):
-                self.viewModel.observable.value = .error(error: error.localizedDescription)
+                self.viewModel.viewStateObservable.value = .error(error: error.localizedDescription)
                 break
             }
         }
@@ -65,18 +65,18 @@ class ListPhotosController: NSObject {
             currentDate = currentDate.addDay(-1)
         } else {
             photosData.append(contentsOf: photos)
-            self.viewModel.observable.value = .refresh(photos: photos)
+            self.viewModel.viewStateObservable.value = .refresh(photos: photos)
         }
     }
     
     public func selectCamera(at position: Int) {
-        self.viewModel.observable.value = .loading
+        self.viewModel.viewStateObservable.value = .loading
         camera = Camera(rawValue: Camera.allCases[position])!
         currentDate = Date()
     }
     
     public func start() {
-        self.viewModel.observable.value = .loading
+        self.viewModel.viewStateObservable.value = .loading
         fetchPhotos()
     }
 }
