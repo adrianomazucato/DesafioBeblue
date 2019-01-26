@@ -15,6 +15,7 @@ class ListPhotosController: NSObject {
         case opportunity = "opportunity"
         case spirit = "spirit"
 
+        //TODO: pegar itesm do enum
         static var allCases: [String] {
             let values: [String] = ["curiosity", "opportunity" , "spirit"]
             return values
@@ -44,7 +45,6 @@ class ListPhotosController: NSObject {
     
     private func fetchPhotos() {
         photosData.removeAll()
-                
         ApiNasaService.fetchPhotos(camera.rawValue, date: currentDate.apiFormatterDate) { ( response ) in
             switch(response) {
             case .success(let value):
@@ -61,11 +61,11 @@ class ListPhotosController: NSObject {
     }
     
     private func checkPhotos(photos: [Photo]) {
-        if photos.count > 0 {
+        if photos.isEmpty {
+            currentDate = currentDate.addDay(-1)
+        } else {
             photosData.append(contentsOf: photos)
             self.viewModel.observable.value = .refresh(photos: photos)
-        } else {
-            currentDate = currentDate.addDay(-1)
         }
     }
     
@@ -80,7 +80,6 @@ class ListPhotosController: NSObject {
         fetchPhotos()
     }
 }
-
 
 extension ListPhotosController {
     func countPhotos() -> Int {
