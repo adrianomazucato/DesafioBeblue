@@ -14,12 +14,30 @@ class ListPhotosController: NSObject {
         case curiosity = "curiosity"
         case opportunity = "opportunity"
         case spirit = "spirit"
+        
+        static var allValues:[String] {
+            return ["curiosity", "opportunity", "spirit"]
+        }
+        
+//        func title()-> String {
+//            switch self {
+//            case .curiosity:
+//                return "curiosity"
+//            case .opportunity:
+//                return "opportunity"
+//            case .spirit:
+//                return "spirit"
+//            }
+//        }
 
         //TODO: pegar itesm do enum
-        static var allCases: [String] {
-            let values: [String] = ["curiosity", "opportunity" , "spirit"]
-            return values
-        }
+//        static var allCases: [String] {
+//            var values: [String] = []
+//            for camera in Camera.allCases {
+//                values.append(camera)
+//            }
+//            return values
+//        }
     }
     
     private var camera: Camera = .curiosity
@@ -41,6 +59,8 @@ class ListPhotosController: NSObject {
     
     init(viewModel: ListPhotosViewModel = ListPhotosViewModel()) {
         self.viewModel = viewModel
+        
+        
     }
     
     private func fetchPhotos() {
@@ -71,7 +91,7 @@ class ListPhotosController: NSObject {
     
     public func selectCamera(at position: Int) {
         self.viewModel.viewStateObservable.value = .loading
-        camera = Camera(rawValue: Camera.allCases[position])!
+        camera = Camera(rawValue: Camera.allValues[position])!
         currentDate = Date()
     }
     

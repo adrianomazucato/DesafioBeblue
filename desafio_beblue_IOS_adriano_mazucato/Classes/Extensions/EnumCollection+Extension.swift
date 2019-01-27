@@ -8,6 +8,26 @@
 
 import UIKit
 
+//protocol RawValued: Hashable, RawRepresentable {
+//    static var rawValues: [RawValue] { get }
+//}
+//extension RawValued {
+//    static var rawValues: [RawValue] {
+//        var rawValues: [RawValue] = []
+//        var index = 0
+//        
+//        for element: Self in AnyIterator({
+//            let item = withUnsafeBytes(of: &index) { $0.load(as: Self.self) }
+//            guard item.hashValue == index else { return nil }
+//            index += 1
+//            return item
+//        }) {
+//            rawValues.append(element.rawValue)
+//        }
+//        return rawValues
+//    }
+//}
+
 protocol EnumCollection : Hashable {}
 
 extension RawRepresentable where Self: Hashable {

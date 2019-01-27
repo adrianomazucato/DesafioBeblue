@@ -21,8 +21,8 @@ class PhotoDetailViewController: UIViewController {
         return imageView
     }()
     
-    var namePhoto: UILabel = {
-        let label = UILabel()
+    var namePhoto: AnimatedLabel = {
+        let label = AnimatedLabel()
         label.textColor = .black
         label.isUserInteractionEnabled = true
         return label

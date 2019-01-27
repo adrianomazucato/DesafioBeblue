@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB77EFD21FE003500032094 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB77EFC21FE003500032094 /* AnimatedLabel.swift */; };
+		0EB77EFE21FE00A800032094 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB77EFC21FE003500032094 /* AnimatedLabel.swift */; };
+		0EB77EFF21FE00A900032094 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB77EFC21FE003500032094 /* AnimatedLabel.swift */; };
 		0EC8B65121FB3C7E007F33A3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B65021FB3C7E007F33A3 /* Photo.swift */; };
 		0EC8B65321FB3E0E007F33A3 /* APIConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B65221FB3E0E007F33A3 /* APIConsumer.swift */; };
 		0EC8B65621FB4C01007F33A3 /* ObjectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8B65521FB4C01007F33A3 /* ObjectParser.swift */; };
@@ -102,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EB77EFC21FE003500032094 /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
 		0EC8B65021FB3C7E007F33A3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0EC8B65221FB3E0E007F33A3 /* APIConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConsumer.swift; sourceTree = "<group>"; };
 		0EC8B65521FB4C01007F33A3 /* ObjectParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectParser.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC8B6A621FB9570007F33A3 /* ImageViewZoom.swift */,
+				0EB77EFC21FE003500032094 /* AnimatedLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 				0EC8B65621FB4C01007F33A3 /* ObjectParser.swift in Sources */,
 				0EC8B65321FB3E0E007F33A3 /* APIConsumer.swift in Sources */,
 				0EC8B69621FB9088007F33A3 /* PhotoDetailViewController.swift in Sources */,
+				0EB77EFD21FE003500032094 /* AnimatedLabel.swift in Sources */,
 				0EC8B6A721FB9570007F33A3 /* ImageViewZoom.swift in Sources */,
 				0EC8B65B21FB4FC5007F33A3 /* Alamofire+DataRequest.swift in Sources */,
 				0EC8B67721FB6F19007F33A3 /* ItemPhotoCell.swift in Sources */,
@@ -629,6 +635,7 @@
 				0EC8B68221FB79BB007F33A3 /* ListPhotosController.swift in Sources */,
 				0EC8B6B021FBCB81007F33A3 /* ControlObservable.swift in Sources */,
 				0EC8B69B21FB90C9007F33A3 /* PhotoDetailCoordinator.swift in Sources */,
+				0EB77EFE21FE00A800032094 /* AnimatedLabel.swift in Sources */,
 				0EC8B6A121FB92E4007F33A3 /* PhotosListViewController.swift in Sources */,
 				0EC8B69321FB894F007F33A3 /* PhotoItemViewModel.swift in Sources */,
 				0EC8B67821FB6F19007F33A3 /* ItemPhotoCell.swift in Sources */,
@@ -657,6 +664,7 @@
 				0EC8B68321FB79BD007F33A3 /* ListPhotosController.swift in Sources */,
 				0EC8B6B121FBCB81007F33A3 /* ControlObservable.swift in Sources */,
 				0EC8B69C21FB90C9007F33A3 /* PhotoDetailCoordinator.swift in Sources */,
+				0EB77EFF21FE00A900032094 /* AnimatedLabel.swift in Sources */,
 				0EC8B6A221FB92E4007F33A3 /* PhotosListViewController.swift in Sources */,
 				0EC8B69421FB894F007F33A3 /* PhotoItemViewModel.swift in Sources */,
 				0EC8B67921FB6F19007F33A3 /* ItemPhotoCell.swift in Sources */,

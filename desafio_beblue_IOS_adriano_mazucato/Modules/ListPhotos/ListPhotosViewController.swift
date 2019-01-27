@@ -16,7 +16,7 @@ protocol ListPhotosViewControllerDelegate: class {
 class ListPhotosViewController: UIViewController {
     
     var segmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: ListPhotosController.Camera.allCases)
+        let segmentedControl = UISegmentedControl(items: ListPhotosController.Camera.allValues)
         segmentedControl.backgroundColor = .white
         segmentedControl.selectedSegmentIndex = 0
         //segmentedControl.addTarget(self, action: #selector(ListPhotosViewController.valueChanged), for: .valueChanged)
