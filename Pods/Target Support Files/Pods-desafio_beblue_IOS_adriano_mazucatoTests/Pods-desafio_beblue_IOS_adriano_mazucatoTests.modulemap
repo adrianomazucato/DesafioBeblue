@@ -1,0 +1,6 @@
+framework module Pods_desafio_beblue_IOS_adriano_mazucatoTests {
+  umbrella header "Pods-desafio_beblue_IOS_adriano_mazucatoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
